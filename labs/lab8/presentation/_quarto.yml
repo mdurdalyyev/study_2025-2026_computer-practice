@@ -1,0 +1,70 @@
+project:
+  title: "presentation"
+  output-dir: "_output"
+
+standalone: true
+self-contained: true
+
+## Generic options
+lang: ru-RU
+crossref:
+  lof-title: Список иллюстраций
+  lot-title: Список таблиц
+  lol-title: Листинги
+
+## Formats
+format:
+  ### Pdf output format
+  beamer:
+    pdf-engine: xelatex
+    toc: true
+    toc-title: Содержание
+    number-sections: true
+    colorlinks: false
+    toc-depth: 2
+    slide-level: 2
+    aspectratio: 169
+    section-titles: true
+    incremental: false
+    navigation: horizontal
+    csquotes: true
+    indent: true
+    include-in-header:
+      - file: _assets/beamer.tex
+    #### Language
+    babel-lang: russian
+    babel-otherlangs: english
+
+  ### Html output
+  revealjs:
+    transition: slide
+    margin: 0.2
+    smaller: true
+    slide-number: true
+    output-ext: html
+    theme: beige
+    logo: _resources/image/logo_rudn.png
+    include-in-header: 
+      - text: |
+          <style>
+          .reveal section h1 {
+            width: 100% !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            font-size: 2.5em !important;
+          }
+          .reveal section h2 {
+            width: 100% !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            font-size: 1.8em !important;
+          }
+          .reveal .slides section:first-child p,
+          .reveal .slides section:first-child div {
+            text-align: center !important;
+            margin: 15px auto !important;
+            width: 80% !important;
+          }
+          </style>
